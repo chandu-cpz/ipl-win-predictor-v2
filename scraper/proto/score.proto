@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package score;
+
+service ScoreStream {
+    rpc StreamScore (StreamScoreRequest) returns (stream StreamScoreResponse) {}
+}
+
+message StreamScoreRequest {
+    string match_id = 1;
+}
+
+message StreamScoreResponse {
+    string score = 1;
+    string batsman = 2;
+    string currentrunrate = 3;
+    string battingteam = 4;
+    string bowlingteam = 5;
+    string innings = 6;
+    string wickets = 7;
+    string overs = 8;
+    string tosswinner = 9;
+    string tossdecision = 10;
+    string team1 = 11;
+    string team2 = 12;
+    string umpire1 = 13;
+    string umpire2 = 14;
+    string umpire3 = 15;
+    string venue = 16;
+    string matchid = 17;
+    string nonStriker = 18;
+    string bowler= 19;
+}
+
